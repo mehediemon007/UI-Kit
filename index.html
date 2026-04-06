@@ -766,8 +766,14 @@
                 
                 <div class="dropdown">
                   <div class="dropdown__trigger">
-                    <span>Language: English</span>
+                    <span>English</span>
                     <svg class="dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </div>
+                  <div class="dropdown__menu">
+                    <div class="dropdown__item" data-selected>English</div>
+                    <div class="dropdown__item">Spanish</div>
+                    <div class="dropdown__item">French</div>
+                    <div class="dropdown__item">German</div>
                   </div>
                 </div>
 
@@ -1013,6 +1019,55 @@
           link.classList.add('active');
         }
       });
+    });
+
+    // Dropdown Logic
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('.dropdown__trigger');
+      const items = dropdown.querySelectorAll('.dropdown__item');
+      
+      if (trigger) {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = dropdown.hasAttribute('data-open');
+          
+          // Close all other dropdowns
+          document.querySelectorAll('.dropdown').forEach(d => d.removeAttribute('data-open'));
+          
+          if (!isOpen) {
+            dropdown.setAttribute('data-open', '');
+          }
+        });
+      }
+      
+      if (items.length > 0) {
+        items.forEach(item => {
+          item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // If the item color is explicitly danger (e.g. Log Out), just close, don't update selection
+            if (!item.style.color) {
+              const triggerSpan = trigger.querySelector('span');
+              if (triggerSpan) {
+                triggerSpan.textContent = item.textContent;
+              }
+              
+              // Remove selected from all items
+              items.forEach(i => i.removeAttribute('data-selected'));
+              item.setAttribute('data-selected', '');
+            }
+            
+            dropdown.removeAttribute('data-open');
+          });
+        });
+      }
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown').forEach(d => d.removeAttribute('data-open'));
     });
   </script>
 </body>
