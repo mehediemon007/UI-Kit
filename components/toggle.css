@@ -1,0 +1,122 @@
+/* ============================================================
+   TOGGLE / SWITCH COMPONENT
+   Sizes:    data-size="sm|md|lg"
+   States:   disabled, checked
+   ============================================================ */
+
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-8xs);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.toggle__track {
+  position: relative;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-medium);
+  transition:
+    background var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: var(--color-white-base);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  transition:
+    transform var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.toggle__label {
+  font-family: var(--font-general);
+  font-weight: var(--fw-regular);
+  color: var(--color-black-inverse);
+}
+
+/* —— Sizes —— */
+.toggle[data-size="sm"] .toggle__track,
+.toggle:not([data-size]) .toggle__track { /* sm = default-small */
+  width: 36px;
+  height: 20px;
+}
+.toggle[data-size="sm"] .toggle__thumb,
+.toggle:not([data-size]) .toggle__thumb {
+  width: 16px;
+  height: 16px;
+}
+.toggle[data-size="sm"] .toggle__label,
+.toggle:not([data-size]) .toggle__label {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+}
+
+.toggle[data-size="md"] .toggle__track {
+  width: 44px;
+  height: 24px;
+}
+.toggle[data-size="md"] .toggle__thumb {
+  width: 20px;
+  height: 20px;
+}
+.toggle[data-size="md"] .toggle__label {
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+}
+
+.toggle[data-size="lg"] .toggle__track {
+  width: 52px;
+  height: 28px;
+}
+.toggle[data-size="lg"] .toggle__thumb {
+  width: 24px;
+  height: 24px;
+}
+.toggle[data-size="lg"] .toggle__label {
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+}
+
+/* —— Checked state —— */
+.toggle__input:checked + .toggle__track {
+  background: var(--color-accent-primary);
+}
+
+/* sm / default */
+.toggle:not([data-size]) .toggle__input:checked + .toggle__track .toggle__thumb,
+.toggle[data-size="sm"] .toggle__input:checked + .toggle__track .toggle__thumb {
+  transform: translateX(16px);
+}
+.toggle[data-size="md"] .toggle__input:checked + .toggle__track .toggle__thumb {
+  transform: translateX(20px);
+}
+.toggle[data-size="lg"] .toggle__input:checked + .toggle__track .toggle__thumb {
+  transform: translateX(24px);
+}
+
+/* —— Focus —— */
+.toggle__input:focus-visible + .toggle__track {
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a40);
+}
+
+/* —— Disabled —— */
+.toggle:has(.toggle__input:disabled) {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+}

@@ -1,0 +1,206 @@
+/* ============================================================
+   MODAL / DIALOG COMPONENT
+   Variants: data-size="sm|md|lg|full"
+   Toggles:  data-centered
+   ============================================================ */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-overlay-bold);
+  backdrop-filter: blur(var(--blur-low));
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--sp-xs);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  overflow-y: auto;
+}
+
+.modal-backdrop[data-centered] {
+  align-items: center;
+}
+
+.modal-backdrop[data-open] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background: var(--color-surface-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  width: 100%;
+  max-width: 500px; /* default md */
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px) scale(0.95);
+  transition: transform var(--transition-normal);
+  font-family: var(--font-general);
+  border: var(--bw-3xs) solid var(--color-gray-ultra);
+}
+
+.modal-backdrop[data-open] .modal {
+  transform: translateY(0) scale(1);
+}
+
+/* —— Sizes —— */
+.modal-backdrop[data-size="sm"] .modal { max-width: 400px; }
+.modal-backdrop, .modal-backdrop[data-size="md"] .modal { max-width: 500px; }
+.modal-backdrop[data-size="lg"] .modal { max-width: 800px; }
+.modal-backdrop[data-size="full"] .modal {
+  max-width: 100%;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+/* —— Elements —— */
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-6xs) var(--sp-5xs);
+  border-bottom: var(--bw-3xs) solid var(--color-gray-ultra);
+}
+
+.modal__title {
+  font-size: var(--fs-title-s);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-accent);
+  color: var(--color-black-inverse);
+}
+
+.modal__close {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-gray-regular);
+  border-radius: var(--radius-s);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.modal__close:hover {
+  background: var(--color-bg-thin);
+  color: var(--color-black-inverse);
+}
+
+.modal__body {
+  padding: var(--sp-5xs);
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+  color: var(--color-black-inverse-a80);
+}
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-7xs);
+  padding: var(--sp-6xs) var(--sp-5xs);
+  border-top: var(--bw-3xs) solid var(--color-gray-ultra);
+  background: var(--color-surface-low-2);
+  border-bottom-left-radius: var(--radius-xl);
+  border-bottom-right-radius: var(--radius-xl);
+}
+
+
+/* ============================================================
+   DROPDOWN / SELECT COMPONENT
+   ============================================================ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-general);
+}
+
+.dropdown__trigger {
+  /* Extending from specific input/button, but we provide base wrap styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-8xs);
+  cursor: pointer;
+  background: var(--color-bg-base);
+  border: var(--bw-3xs) solid var(--color-gray-medium);
+  padding: 10px var(--sp-7xs); /* md size */
+  border-radius: var(--radius-m);
+  color: var(--color-black-inverse);
+  min-width: 160px;
+  transition: border-color var(--transition-fast);
+}
+
+.dropdown__trigger:hover {
+  border-color: var(--color-gray-regular);
+}
+
+.dropdown[data-open] .dropdown__trigger {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a20);
+}
+
+/* Chevron */
+.dropdown__chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-normal);
+  color: var(--color-gray-regular);
+}
+.dropdown[data-open] .dropdown__chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  min-width: max-content;
+  background: var(--color-surface-medium);
+  border: var(--bw-3xs) solid var(--color-gray-ultra);
+  border-radius: var(--radius-m);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: var(--sp-9xs);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.dropdown[data-open] .dropdown__menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8xs);
+  padding: var(--sp-8xs) var(--sp-7xs);
+  font-size: var(--fs-body-s);
+  color: var(--color-black-inverse);
+  cursor: pointer;
+  border-radius: var(--radius-s);
+  transition: background var(--transition-fast);
+}
+
+.dropdown__item:hover {
+  background: var(--color-bg-thin);
+}
+
+.dropdown__item[data-selected] {
+  background: var(--color-accent-primary-a8);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent-primary);
+}

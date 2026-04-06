@@ -1,0 +1,119 @@
+/* ============================================================
+   RADIO COMPONENT
+   Sizes:    data-size="sm|md|lg"
+   States:   disabled, checked
+   ============================================================ */
+
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-8xs);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.radio__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bw-2xs) solid var(--color-gray-medium);
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.radio__dot {
+  border-radius: 50%;
+  background: #fff;
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.radio__label {
+  font-family: var(--font-general);
+  font-weight: var(--fw-regular);
+  color: var(--color-black-inverse);
+}
+
+/* —— Sizes —— */
+.radio[data-size="sm"] .radio__circle,
+.radio:not([data-size]) .radio__circle {
+  width: 16px;
+  height: 16px;
+}
+.radio[data-size="sm"] .radio__dot,
+.radio:not([data-size]) .radio__dot {
+  width: 6px;
+  height: 6px;
+}
+.radio[data-size="sm"] .radio__label,
+.radio:not([data-size]) .radio__label {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+}
+
+.radio[data-size="md"] .radio__circle {
+  width: 20px;
+  height: 20px;
+}
+.radio[data-size="md"] .radio__dot {
+  width: 8px;
+  height: 8px;
+}
+.radio[data-size="md"] .radio__label {
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+}
+
+.radio[data-size="lg"] .radio__circle {
+  width: 24px;
+  height: 24px;
+}
+.radio[data-size="lg"] .radio__dot {
+  width: 10px;
+  height: 10px;
+}
+.radio[data-size="lg"] .radio__label {
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+}
+
+/* —— Checked —— */
+.radio__input:checked + .radio__circle {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+.radio__input:checked + .radio__circle .radio__dot {
+  transform: scale(1);
+}
+
+/* —— Hover —— */
+.radio:hover .radio__circle {
+  border-color: var(--color-accent-primary-a60);
+}
+
+/* —— Focus —— */
+.radio__input:focus-visible + .radio__circle {
+  box-shadow: 0 0 0 3px var(--color-accent-primary-a40);
+}
+
+/* —— Disabled —— */
+.radio:has(.radio__input:disabled) {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+  cursor: not-allowed;
+}

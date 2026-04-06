@@ -1,0 +1,295 @@
+/* ============================================================
+   TOOLTIP COMPONENT
+   Positions: data-position="top|bottom|left|right"
+   Variants:  data-variant="dark|light"
+   ============================================================ */
+
+.tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  padding: var(--sp-10xs) var(--sp-8xs);
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-s);
+  line-height: var(--lh-caption-s);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  border-radius: var(--radius-s);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.tooltip-wrap:hover .tooltip,
+.tooltip-wrap:focus-within .tooltip {
+  opacity: 1;
+}
+
+/* —— Variants —— */
+.tooltip,
+.tooltip[data-variant="dark"] {
+  background: var(--color-black-inverse);
+  color: var(--color-white-inverse);
+}
+.tooltip[data-variant="light"] {
+  background: var(--color-surface-medium);
+  color: var(--color-black-inverse);
+  border: var(--bw-3xs) solid var(--color-gray-ultra);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* —— Positions —— */
+.tooltip,
+.tooltip[data-position="top"] {
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip[data-position="bottom"] {
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip[data-position="left"] {
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip[data-position="right"] {
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* ============================================================
+   ALERT / BANNER COMPONENT
+   Variants: data-variant="info|success|warning|danger"
+   Toggles:  data-dismissible, data-icon
+   ============================================================ */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-7xs);
+  padding: var(--sp-7xs) var(--sp-6xs);
+  border-radius: var(--radius-m);
+  font-family: var(--font-general);
+  border: var(--bw-3xs) solid transparent;
+  transition: opacity var(--transition-normal);
+}
+
+.alert__icon {
+  display: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+.alert[data-icon] .alert__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10xs);
+}
+
+.alert__title {
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-body-s);
+}
+
+.alert__description {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+  opacity: 0.8;
+}
+
+.alert__dismiss {
+  display: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-2xs);
+  color: currentColor;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast);
+}
+.alert__dismiss:hover {
+  opacity: 1;
+}
+.alert[data-dismissible] .alert__dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* —— Variants —— */
+.alert,
+.alert[data-variant="info"] {
+  background: var(--color-accent-primary-a8);
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary-a20);
+}
+.alert[data-variant="success"] {
+  background: var(--color-accent-success-a8);
+  color: var(--color-accent-success);
+  border-color: var(--color-accent-success-a20);
+}
+.alert[data-variant="warning"] {
+  background: var(--color-accent-warning-a8);
+  color: var(--color-accent-warning);
+  border-color: var(--color-accent-warning-a20);
+}
+.alert[data-variant="danger"] {
+  background: var(--color-accent-danger-a8);
+  color: var(--color-accent-danger);
+  border-color: var(--color-accent-danger-a20);
+}
+
+
+/* ============================================================
+   PROGRESS BAR COMPONENT
+   Sizes:    data-size="sm|md|lg"
+   Variants: data-variant="default|success|danger|warning"
+   Toggles:  data-animated, data-striped, data-label
+   ============================================================ */
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-10xs);
+  width: 100%;
+}
+
+.progress__header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress[data-label] .progress__header {
+  display: flex;
+}
+
+.progress__label {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-m);
+  font-weight: var(--fw-medium);
+  color: var(--color-black-inverse);
+  line-height: var(--lh-caption-m);
+}
+
+.progress__value {
+  font-family: var(--font-general);
+  font-size: var(--fs-caption-s);
+  color: var(--color-gray-regular);
+  line-height: var(--lh-caption-s);
+}
+
+.progress__track {
+  width: 100%;
+  background: var(--color-bg-ultra-thin);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* —— Sizes —— */
+.progress[data-size="sm"] .progress__track { height: 4px; }
+.progress .progress__track,
+.progress[data-size="md"] .progress__track { height: 8px; }
+.progress[data-size="lg"] .progress__track { height: 12px; }
+
+/* —— Variants —— */
+.progress .progress__fill,
+.progress[data-variant="default"] .progress__fill {
+  background: var(--color-accent-primary);
+}
+.progress[data-variant="success"] .progress__fill {
+  background: var(--color-accent-success);
+}
+.progress[data-variant="danger"] .progress__fill {
+  background: var(--color-accent-danger);
+}
+.progress[data-variant="warning"] .progress__fill {
+  background: var(--color-accent-warning);
+}
+
+/* —— Striped —— */
+.progress[data-striped] .progress__fill {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255,255,255,0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    transparent 75%
+  );
+  background-size: 20px 20px;
+}
+
+/* —— Animated —— */
+.progress[data-animated] .progress__fill {
+  animation: progress-stripes 1s linear infinite;
+}
+@keyframes progress-stripes {
+  0% { background-position: 20px 0; }
+  100% { background-position: 0 0; }
+}
+
+
+/* ============================================================
+   SKELETON / PLACEHOLDER
+   Variants: data-variant="text|circle|rect"
+   ============================================================ */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-ultra-thin) 25%,
+    var(--color-bg-thin) 50%,
+    var(--color-bg-ultra-thin) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-s);
+}
+
+.skeleton[data-variant="text"] {
+  height: 16px;
+  width: 100%;
+  border-radius: var(--radius-2xs);
+}
+
+.skeleton[data-variant="circle"] {
+  border-radius: 50%;
+}
+
+.skeleton[data-variant="rect"] {
+  border-radius: var(--radius-m);
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

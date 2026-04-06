@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech Fusion UI Kit</title>
+  
+  <!-- Tokens & Globals -->
+  <link rel="stylesheet" href="tokens.css">
+  
+  <!-- Components -->
+  <link rel="stylesheet" href="components/button.css">
+  <link rel="stylesheet" href="components/input.css">
+  <link rel="stylesheet" href="components/badge.css">
+  <link rel="stylesheet" href="components/toggle.css">
+  <link rel="stylesheet" href="components/checkbox.css">
+  <link rel="stylesheet" href="components/radio.css">
+  <link rel="stylesheet" href="components/card.css">
+  <link rel="stylesheet" href="components/avatar.css">
+  <link rel="stylesheet" href="components/navigation.css">
+  <link rel="stylesheet" href="components/overlays.css">
+  <link rel="stylesheet" href="components/content.css">
+  <link rel="stylesheet" href="components/extras.css">
+  
+  <!-- Demo Styling -->
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+  <div class="demo-shell">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="demo-sidebar">
+      <div class="demo-sidebar__logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+        FUSION UIT
+      </div>
+
+      <nav class="demo-sidebar__nav">
+        <div class="demo-sidebar__section-title">Design Tokens</div>
+        <a href="#colors" class="demo-sidebar__link active">Colors</a>
+        <a href="#typography" class="demo-sidebar__link">Typography</a>
+        <a href="#spacing" class="demo-sidebar__link">Spacing & Radius</a>
+        
+        <div class="demo-sidebar__section-title">Components</div>
+        <a href="#buttons" class="demo-sidebar__link">Buttons</a>
+        <a href="#inputs" class="demo-sidebar__link">Inputs</a>
+        <a href="#badges" class="demo-sidebar__link">Badges</a>
+        <a href="#toggles" class="demo-sidebar__link">Toggles</a>
+        <a href="#checkboxes" class="demo-sidebar__link">Checkboxes</a>
+        <a href="#radios" class="demo-sidebar__link">Radios</a>
+        <a href="#cards" class="demo-sidebar__link">Cards</a>
+        <a href="#avatars" class="demo-sidebar__link">Avatars</a>
+        <a href="#navigations" class="demo-sidebar__link">Navigations</a>
+        <a href="#overlays" class="demo-sidebar__link">Overlays</a>
+        <a href="#content" class="demo-sidebar__link">Content Details</a>
+        <a href="#extras" class="demo-sidebar__link">Progress & Alerts</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="demo-main">
+
+      <!-- Header with Theme Toggle -->
+      <header class="demo-header">
+        <div class="demo-header__title">Component Showcase</div>
+        <div class="demo-header__actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Sections -->
+      <div class="demo-content">
+
+        <!-- ==========================================
+             COLORS
+             ========================================== -->
+        <section id="colors" class="demo-section">
+          <h2 class="demo-section__title">Colors</h2>
+          <p class="demo-section__description">Core semantic and accent colors adapting to both Light and Dark themes automatically.</p>
+          
+          <div class="demo-grid">
+            <div class="demo-block">
+              <div class="demo-block__label">Accent Primary</div>
+              <div class="swatch-grid">
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-primary)"></div><span class="swatch__name">primary</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-primary-a60)"></div><span class="swatch__name">primary a60</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-primary-a20)"></div><span class="swatch__name">primary a20</span></div>
+              </div>
+            </div>
+
+            <div class="demo-block">
+              <div class="demo-block__label">Accent Success</div>
+              <div class="swatch-grid">
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-success)"></div><span class="swatch__name">success</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-success-a60)"></div><span class="swatch__name">success a60</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-success-a20)"></div><span class="swatch__name">success a20</span></div>
+              </div>
+            </div>
+
+            <div class="demo-block">
+              <div class="demo-block__label">Accent Danger</div>
+              <div class="swatch-grid">
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-danger)"></div><span class="swatch__name">danger</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-danger-a60)"></div><span class="swatch__name">danger a60</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-accent-danger-a20)"></div><span class="swatch__name">danger a20</span></div>
+              </div>
+            </div>
+
+            <div class="demo-block" style="width: 100%;">
+              <div class="demo-block__label">Backgrounds & Surfaces</div>
+              <div class="swatch-grid">
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-bg-base); border: 1px solid var(--color-gray-ultra)"></div><span class="swatch__name">bg-base</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-bg-ultra-thin); border: 1px solid var(--color-gray-ultra)"></div><span class="swatch__name">bg-ultra-thin</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-bg-thin); border: 1px solid var(--color-gray-ultra)"></div><span class="swatch__name">bg-thin</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-bg-regular)"></div><span class="swatch__name">bg-regular</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-bg-medium)"></div><span class="swatch__name">bg-medium</span></div>
+              </div>
+            </div>
+            
+            <div class="demo-block" style="width: 100%;">
+              <div class="demo-block__label">Text</div>
+              <div class="swatch-grid">
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-black-inverse)"></div><span class="swatch__name">inverse</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-black-inverse-a80)"></div><span class="swatch__name">inverse a80</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-black-inverse-a60)"></div><span class="swatch__name">inverse a60</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-black-inverse-a40)"></div><span class="swatch__name">inverse a40</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-gray-regular)"></div><span class="swatch__name">gray-regular</span></div>
+                <div class="swatch"><div class="swatch__color" style="background: var(--color-gray-normal)"></div><span class="swatch__name">gray-normal</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             TYPOGRAPHY
+             ========================================== -->
+        <section id="typography" class="demo-section">
+          <h2 class="demo-section__title">Typography</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block" style="flex: 1;">
+              <div class="demo-block__label">Fintech Fusion (General)</div>
+              
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-display-m); line-height: var(--lh-display-m); font-weight: var(--fw-bold);">Display M</div>
+                <div class="type-sample__meta">64px / 72px Line Height / Bold</div>
+              </div>
+              
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-title-l); line-height: var(--lh-title-l); font-weight: var(--fw-semibold);">Title Large</div>
+                <div class="type-sample__meta">40px / 48px Line Height / SemiBold</div>
+              </div>
+
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-title-m); line-height: var(--lh-title-m); font-weight: var(--fw-semibold);">Title Medium</div>
+                <div class="type-sample__meta">32px / 40px Line Height / SemiBold</div>
+              </div>
+
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-body-l); line-height: var(--lh-body-l); font-weight: var(--fw-regular);">Body Large — The quick brown fox jumps over the lazy dog.</div>
+                <div class="type-sample__meta">18px / 24px Line Height / Regular</div>
+              </div>
+
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-body-m); line-height: var(--lh-body-m); font-weight: var(--fw-regular);">Body Medium — The quick brown fox jumps over the lazy dog.</div>
+                <div class="type-sample__meta">16px / 22px Line Height / Regular</div>
+              </div>
+
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-size: var(--fs-caption-m); line-height: var(--lh-caption-m); font-weight: var(--fw-regular);">Caption Medium — The quick brown fox jumps over the lazy dog.</div>
+                <div class="type-sample__meta">13px / 18px Line Height / Regular</div>
+              </div>
+            </div>
+            
+            <div class="demo-block" style="flex: 1;">
+              <div class="demo-block__label">Onest (Accent)</div>
+              
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-family: var(--font-accent); font-size: var(--fs-display-s); line-height: var(--lh-display-s); font-weight: var(--fw-bold);">Display S Accent</div>
+                <div class="type-sample__meta">48px / 56px Line Height / Bold</div>
+              </div>
+              
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-family: var(--font-accent); font-size: var(--fs-title-s); line-height: var(--lh-title-s); font-weight: var(--fw-semibold);">Title Small Accent</div>
+                <div class="type-sample__meta">24px / 32px Line Height / SemiBold</div>
+              </div>
+              
+              <div class="type-sample">
+                <div class="type-sample__text" style="font-family: var(--font-accent); font-size: var(--fs-body-m); line-height: var(--lh-body-m); font-weight: var(--fw-medium);">Body Medium Accent</div>
+                <div class="type-sample__meta">16px / 22px Line Height / Medium</div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             SPACING & RADIUS
+             ========================================== -->
+        <section id="spacing" class="demo-section">
+          <h2 class="demo-section__title">Spacing & Radius</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 300px;">
+              <div class="demo-block__label">Spacing</div>
+              <div style="display: flex; flex-direction: column; gap: var(--sp-6xs);">
+                
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-3xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-3xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">32px</div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-4xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-4xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">24px</div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-5xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-5xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">20px</div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-6xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-6xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">16px</div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-7xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-7xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">12px</div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: var(--sp-xs);">
+                  <div style="width: 60px; text-align: right; font-size: var(--fs-caption-m); color: var(--color-gray-regular);">--sp-8xs</div>
+                  <div style="height: 24px; background: var(--color-accent-primary-a20); width: var(--sp-8xs); border-radius: var(--radius-3xs);"></div>
+                  <div style="font-size: var(--fs-caption-m);">8px</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 300px;">
+              <div class="demo-block__label">Radius</div>
+              <div class="demo-block__row" style="flex-wrap: wrap; gap: var(--sp-3xs); align-items: flex-end;">
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-8xs);">
+                  <div style="width: 64px; height: 64px; background: var(--color-accent-primary); border-radius: var(--radius-s);"></div>
+                  <span style="font-size: var(--fs-caption-s); color: var(--color-gray-regular);">s (8px)</span>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-8xs);">
+                  <div style="width: 64px; height: 64px; background: var(--color-accent-primary); border-radius: var(--radius-m);"></div>
+                  <span style="font-size: var(--fs-caption-s); color: var(--color-gray-regular);">m (12px)</span>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-8xs);">
+                  <div style="width: 64px; height: 64px; background: var(--color-accent-primary); border-radius: var(--radius-l);"></div>
+                  <span style="font-size: var(--fs-caption-s); color: var(--color-gray-regular);">l (16px)</span>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-8xs);">
+                  <div style="width: 64px; height: 64px; background: var(--color-accent-primary); border-radius: var(--radius-xl);"></div>
+                  <span style="font-size: var(--fs-caption-s); color: var(--color-gray-regular);">xl (20px)</span>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: var(--sp-8xs);">
+                  <div style="width: 64px; height: 64px; background: var(--color-accent-primary); border-radius: var(--radius-full);"></div>
+                  <span style="font-size: var(--fs-caption-s); color: var(--color-gray-regular);">full</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             BUTTONS
+             ========================================== -->
+        <section id="buttons" class="demo-section">
+          <h2 class="demo-section__title">Buttons</h2>
+          <p class="demo-section__description">A robust single-button component with multi variants and sizes.</p>
+
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Variants</div>
+              <div class="demo-block__row">
+                <button class="btn" data-variant="primary">Primary</button>
+                <button class="btn" data-variant="secondary">Secondary</button>
+                <button class="btn" data-variant="outline">Outline</button>
+                <button class="btn" data-variant="ghost">Ghost</button>
+                <button class="btn" data-variant="danger">Danger</button>
+                <button class="btn" data-variant="success">Success</button>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Sizes (Primary)</div>
+              <div class="demo-block__row" style="align-items: center;">
+                <button class="btn" data-variant="primary" data-size="xs">X-Small</button>
+                <button class="btn" data-variant="primary" data-size="sm">Small</button>
+                <button class="btn" data-variant="primary" data-size="md">Medium</button>
+                <button class="btn" data-variant="primary" data-size="lg">Large</button>
+                <button class="btn" data-variant="primary" data-size="xl">X-Large</button>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">States</div>
+              <div class="demo-block__row">
+                <button class="btn" data-variant="primary" disabled>Disabled Pri</button>
+                <button class="btn" data-variant="outline" disabled>Disabled Out</button>
+                <button class="btn" data-variant="primary" data-loading="true">Loading</button>
+                <button class="btn" data-variant="danger" data-loading="true">Loading</button>
+              </div>
+            </div>
+            
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Icons</div>
+              <div class="demo-block__row">
+                <button class="btn" data-variant="primary" data-icon-left>
+                  <svg class="btn__icon btn__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <span class="btn__label">Icon Left</span>
+                </button>
+                <button class="btn" data-variant="secondary" data-icon-right>
+                  <span class="btn__label">Icon Right</span>
+                  <svg class="btn__icon btn__icon--right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn" data-variant="outline" data-icon-only>
+                  <span class="btn__label">Icon Only</span>
+                  <svg class="btn__icon btn__icon--only" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             INPUTS
+             ========================================== -->
+        <section id="inputs" class="demo-section">
+          <h2 class="demo-section__title">Inputs</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block" style="flex: 1; min-width: 280px;">
+              <div class="demo-block__label">Variants</div>
+              <div class="demo-block__col" style="gap: var(--sp-4xs)">
+                
+                <div class="input-group">
+                  <label class="input-group__label">Default Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" placeholder="Type here...">
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Filled Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" data-variant="filled" placeholder="Type here...">
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Flushed Input</label>
+                  <div class="input-wrap">
+                    <input type="text" class="input" data-variant="flushed" placeholder="Type here...">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-block" style="flex: 1; min-width: 280px;">
+              <div class="demo-block__label">States & Addons</div>
+              <div class="demo-block__col" style="gap: var(--sp-4xs)">
+                
+                <div class="input-group" data-error>
+                  <label class="input-group__label">Error State</label>
+                  <div class="input-wrap" data-icon-right>
+                    <input type="text" class="input" value="Invalid email">
+                    <svg class="input-wrap__icon input-wrap__icon--right" style="color: var(--color-accent-danger)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  </div>
+                  <span class="input-group__hint">Please enter a valid email address.</span>
+                </div>
+                
+                <div class="input-group" data-success>
+                  <label class="input-group__label">Success State</label>
+                  <div class="input-wrap" data-icon-right>
+                    <input type="text" class="input" value="user@domain.com">
+                    <svg class="input-wrap__icon input-wrap__icon--right" style="color: var(--color-accent-success)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <span class="input-group__hint">Email is available!</span>
+                </div>
+
+                <div class="input-group">
+                  <label class="input-group__label">Icons Left</label>
+                  <div class="input-wrap" data-icon-left>
+                    <svg class="input-wrap__icon input-wrap__icon--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" class="input" placeholder="Search...">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             BADGES
+             ========================================== -->
+        <section id="badges" class="demo-section">
+          <h2 class="demo-section__title">Badges</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Variants</div>
+              <div class="demo-block__row">
+                <span class="badge" data-variant="default">Default</span>
+                <span class="badge" data-variant="primary">Primary</span>
+                <span class="badge" data-variant="success">Success</span>
+                <span class="badge" data-variant="danger">Danger</span>
+                <span class="badge" data-variant="warning">Warning</span>
+                <span class="badge" data-variant="outline">Outline</span>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Sizes & Options</div>
+              <div class="demo-block__row" style="align-items: center">
+                <span class="badge" data-variant="primary" data-size="sm">Small</span>
+                <span class="badge" data-variant="primary" data-size="md">Medium</span>
+                <span class="badge" data-variant="primary" data-size="lg">Large</span>
+                
+                <!-- Dot -->
+                <span class="badge" data-variant="success" data-dot>
+                  <span class="badge__dot"></span> Active
+                </span>
+                
+                <!-- Icon -->
+                <span class="badge" data-variant="warning" data-icon>
+                  <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Warning
+                </span>
+
+                <!-- Removable -->
+                <span class="badge" data-variant="primary" data-removable>
+                  Removable
+                  <button class="badge__remove">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </button>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             TOGGLES & CHECKBOXES & RADIOS
+             ========================================== -->
+        <section id="form-controls" class="demo-section">
+          <div class="demo-grid">
+            
+            <div class="demo-block demo-grid--col" id="toggles">
+              <div class="demo-block__label">Toggles</div>
+              <div class="demo-block__row">
+                <label class="toggle" data-size="sm">
+                  <input type="checkbox" class="toggle__input">
+                  <div class="toggle__track"><div class="toggle__thumb"></div></div>
+                  <span class="toggle__label">Small</span>
+                </label>
+
+                <label class="toggle" data-size="md">
+                  <input type="checkbox" class="toggle__input" checked>
+                  <div class="toggle__track"><div class="toggle__thumb"></div></div>
+                  <span class="toggle__label">Medium</span>
+                </label>
+
+                <label class="toggle" data-size="lg">
+                  <input type="checkbox" class="toggle__input">
+                  <div class="toggle__track"><div class="toggle__thumb"></div></div>
+                  <span class="toggle__label">Large</span>
+                </label>
+                
+                <label class="toggle" data-size="md">
+                  <input type="checkbox" class="toggle__input" checked disabled>
+                  <div class="toggle__track"><div class="toggle__thumb"></div></div>
+                  <span class="toggle__label">Disabled</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" id="checkboxes">
+              <div class="demo-block__label">Checkboxes</div>
+              <div class="demo-block__row">
+                <label class="checkbox" data-size="sm">
+                  <input type="checkbox" class="checkbox__input">
+                  <div class="checkbox__box">
+                    <svg class="checkbox__icon checkbox__icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox__label">Small</span>
+                </label>
+
+                <label class="checkbox" data-size="md">
+                  <input type="checkbox" class="checkbox__input" checked>
+                  <div class="checkbox__box">
+                    <svg class="checkbox__icon checkbox__icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox__label">Medium</span>
+                </label>
+                
+                <label class="checkbox" data-size="md">
+                  <input type="checkbox" class="checkbox__input" id="indet-checkbox">
+                  <div class="checkbox__box">
+                    <svg class="checkbox__icon checkbox__icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <svg class="checkbox__icon checkbox__icon--minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="display:none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span class="checkbox__label">Indeterminate</span>
+                </label>
+
+                <label class="checkbox" data-size="lg">
+                  <input type="checkbox" class="checkbox__input" checked disabled>
+                  <div class="checkbox__box">
+                    <svg class="checkbox__icon checkbox__icon--check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span class="checkbox__label">Disabled</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" id="radios">
+              <div class="demo-block__label">Radios</div>
+              <div class="demo-block__row">
+                <label class="radio" data-size="sm">
+                  <input type="radio" name="r1" class="radio__input">
+                  <div class="radio__circle"><div class="radio__dot"></div></div>
+                  <span class="radio__label">Small</span>
+                </label>
+
+                <label class="radio" data-size="md">
+                  <input type="radio" name="r1" class="radio__input" checked>
+                  <div class="radio__circle"><div class="radio__dot"></div></div>
+                  <span class="radio__label">Medium</span>
+                </label>
+
+                <label class="radio" data-size="lg">
+                  <input type="radio" name="r1" class="radio__input">
+                  <div class="radio__circle"><div class="radio__dot"></div></div>
+                  <span class="radio__label">Large</span>
+                </label>
+
+                <label class="radio" data-size="md">
+                  <input type="radio" name="r2" class="radio__input" checked disabled>
+                  <div class="radio__circle"><div class="radio__dot"></div></div>
+                  <span class="radio__label">Disabled</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CARDS
+             ========================================== -->
+        <section id="cards" class="demo-section">
+          <h2 class="demo-section__title">Cards</h2>
+          
+          <div class="demo-grid">
+            <div class="card" data-variant="flat" data-size="md" style="width: 320px;">
+              <div class="card__body">
+                <strong>Flat Card</strong><br>
+                This is a default flat card with no header or footer.
+              </div>
+            </div>
+
+            <div class="card" data-variant="elevated" data-size="md" data-header data-footer style="width: 320px;">
+              <div class="card__header">
+                <div>
+                  <div class="card__title">Elevated Card</div>
+                  <div class="card__subtitle">With header & footer</div>
+                </div>
+              </div>
+              <div class="card__body">
+                Elevated cards have a subtle shadow to lift them off the background surface.
+              </div>
+              <div class="card__footer">
+                <button class="btn" data-variant="ghost" data-size="sm">Cancel</button>
+                <button class="btn" data-variant="primary" data-size="sm">Save Changes</button>
+              </div>
+            </div>
+
+            <div class="card" data-variant="outlined" data-size="md" data-header data-hoverable style="width: 320px;">
+              <div class="card__header">
+                <div class="card__title">Outlined & Hoverable</div>
+              </div>
+              <div class="card__body">
+                Hover over me! Outlined cards have a border and can include hover states for interactivity.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             AVATARS
+             ========================================== -->
+        <section id="avatars" class="demo-section">
+          <h2 class="demo-section__title">Avatars</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Sizes & Shapes</div>
+              <div class="demo-block__row" style="align-items: flex-end;">
+                <div class="avatar" data-variant="circle" data-size="xs" data-initials>
+                  <span class="avatar__initials">A</span>
+                </div>
+                <div class="avatar" data-variant="circle" data-size="sm" data-initials>
+                  <span class="avatar__initials">AB</span>
+                </div>
+                <div class="avatar" data-variant="circle" data-size="md" data-initials>
+                  <span class="avatar__initials">JD</span>
+                </div>
+                <div class="avatar" data-variant="rounded" data-size="lg" data-initials>
+                  <span class="avatar__initials">MK</span>
+                </div>
+                <div class="avatar" data-variant="square" data-size="xl" data-initials>
+                  <span class="avatar__initials">TS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col">
+              <div class="demo-block__label">Decorators & Groups</div>
+              <div class="demo-block__row">
+                
+                <div class="avatar" data-variant="circle" data-size="lg" data-initials data-status="online">
+                  <span class="avatar__initials">OL</span>
+                  <div class="avatar__status"></div>
+                </div>
+                
+                <div class="avatar" data-variant="circle" data-size="lg" data-initials data-status="busy">
+                  <span class="avatar__initials">DN</span>
+                  <div class="avatar__status"></div>
+                </div>
+
+                <div class="avatar" data-variant="circle" data-size="lg" data-initials data-badge>
+                  <span class="avatar__initials">MSG</span>
+                  <div class="avatar__badge">3</div>
+                </div>
+
+                <div style="width: 20px;"></div>
+
+                <div class="avatar-group">
+                  <div class="avatar" data-variant="circle" data-size="md" data-initials style="background: var(--color-blue); color: #fff;">
+                    <span class="avatar__initials">A</span>
+                  </div>
+                  <div class="avatar" data-variant="circle" data-size="md" data-initials style="background: var(--color-purple); color: #fff;">
+                    <span class="avatar__initials">B</span>
+                  </div>
+                  <div class="avatar" data-variant="circle" data-size="md" data-initials style="background: var(--color-pink); color: #fff;">
+                    <span class="avatar__initials">C</span>
+                  </div>
+                  <div class="avatar" data-variant="circle" data-size="md" data-initials style="background: var(--color-gray-dark); color: var(--color-black-inverse);">
+                    <span class="avatar__initials">+4</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             NAVIGATIONS
+             ========================================== -->
+        <section id="navigations" class="demo-section">
+          <h2 class="demo-section__title">Navigations</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Tabs (Underline)</div>
+              <div class="tabs" data-variant="underline" data-size="md">
+                <button class="tab-item" data-active>Overview</button>
+                <button class="tab-item">MT4 Platform</button>
+                <button class="tab-item">MT5 Platform</button>
+                <button class="tab-item">Features</button>
+              </div>
+
+              <br>
+              <div class="demo-block__label">Tabs (Pills - Full Width)</div>
+              <div class="tabs" data-variant="pills" data-size="sm" data-full-width>
+                <button class="tab-item" data-active>Standard</button>
+                <button class="tab-item">Professional</button>
+                <button class="tab-item">VIP</button>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Breadcrumbs</div>
+              <div class="breadcrumbs">
+                <a href="#" class="breadcrumb-item">Home</a>
+                <span class="breadcrumb-separator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></span>
+                <a href="#" class="breadcrumb-item">Trading</a>
+                <span class="breadcrumb-separator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></span>
+                <span class="breadcrumb-item" data-active>Standard Account</span>
+              </div>
+
+              <br>
+              <div class="demo-block__label">Stepper (Horizontal)</div>
+              <div class="stepper" data-orientation="horizontal">
+                <div class="step-item" data-completed>
+                  <div class="step-indicator"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <div class="step-content">
+                    <span class="step-title">Register</span>
+                  </div>
+                </div>
+                <div class="step-item" data-active>
+                  <div class="step-indicator">2</div>
+                  <div class="step-content">
+                    <span class="step-title">Download</span>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-indicator">3</div>
+                  <div class="step-content">
+                    <span class="step-title">Trade</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             OVERLAYS
+             ========================================== -->
+        <section id="overlays" class="demo-section">
+          <h2 class="demo-section__title">Overlays</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Dropdowns / Select</div>
+              <div class="demo-block__row">
+                
+                <div class="dropdown">
+                  <div class="dropdown__trigger">
+                    <span>Language: English</span>
+                    <svg class="dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </div>
+                </div>
+
+                <div class="dropdown" data-open>
+                  <div class="dropdown__trigger">
+                    <span>Select Account...</span>
+                    <svg class="dropdown__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </div>
+                  <div class="dropdown__menu">
+                    <div class="dropdown__item" data-selected>Standard Account</div>
+                    <div class="dropdown__item">Professional Account</div>
+                    <div class="dropdown__item">VIP Account</div>
+                    <div style="border-top: 1px solid var(--color-gray-ultra); margin: 4px 0;"></div>
+                    <div class="dropdown__item" style="color: var(--color-accent-danger);">Log Out</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Modal Structure (Inline Preview)</div>
+              
+              <div class="modal" style="transform: none; position: relative;">
+                <div class="modal__header">
+                  <h3 class="modal__title">Get Bonus</h3>
+                  <button class="modal__close"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+                </div>
+                <div class="modal__body">
+                  Please fill out the form below to claim your standard account bonus. Ensure your details match your identification documents.
+                </div>
+                <div class="modal__footer">
+                  <button class="btn" data-variant="ghost" data-size="sm">Skip</button>
+                  <button class="btn" data-variant="primary" data-size="sm">Confirm Details</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             CONTENT
+             ========================================== -->
+        <section id="content" class="demo-section">
+          <h2 class="demo-section__title">Content Details</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Accordion (Bordered)</div>
+              
+              <div class="accordion" data-variant="bordered">
+                <div class="accordion-item" data-open>
+                  <button class="accordion__header">
+                    What is the minimum deposit?
+                    <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="accordion__content">
+                    <div class="accordion__body">
+                      The minimum deposit for a Standard Account is $100. For Professional it is $500. You can deposit using Bank Transfer, Crypto, or Credit Card.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion__header">
+                    How do I withdraw my funds?
+                    <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="accordion__content">
+                    <div class="accordion__body">
+                      Withdrawals are processed within 24 hours back to the original method of deposit.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Accordion (Separated)</div>
+              
+              <div class="accordion" data-variant="separated">
+                <div class="accordion-item">
+                  <button class="accordion__header">
+                    Do you offer Islamic Accounts?
+                    <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="accordion__content">
+                    <div class="accordion__body">
+                      Yes, we offer swap-free Islamic accounts for users requiring them under selected standard offerings.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item" data-open>
+                  <button class="accordion__header">
+                    What leverage is available?
+                    <svg class="accordion__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="accordion__content">
+                    <div class="accordion__body">
+                      Leverage depends on your region and the asset you choose, ranging up to 1:500 for currencies.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             EXTRAS (Alerts, Progress, Tooltips, Skeleton)
+             ========================================== -->
+        <section id="extras" class="demo-section">
+          <h2 class="demo-section__title">Extras</h2>
+          
+          <div class="demo-grid">
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Alerts</div>
+              
+              <div class="alert" data-variant="info" data-icon>
+                <div class="alert__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__title">System Update Available</div>
+                  <div class="alert__description">A new version is ready to be installed.</div>
+                </div>
+              </div>
+
+              <div class="alert" data-variant="warning" data-icon data-dismissible>
+                <div class="alert__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__title">Payment Method Expiring</div>
+                  <div class="alert__description">Your card ending in 4242 will expire soon.</div>
+                </div>
+                <button class="alert__dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+              </div>
+
+              <div class="alert" data-variant="danger" data-icon>
+                <div class="alert__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                </div>
+                <div class="alert__content">
+                  <div class="alert__title">Failed to saving changes</div>
+                  <div class="alert__description">Please check your connection and try again.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-block demo-grid--col" style="flex: 1; min-width: 320px;">
+              <div class="demo-block__label">Progress Bars</div>
+              
+              <div class="progress" data-size="sm">
+                <div class="progress__track">
+                  <div class="progress__fill" style="width: 45%;"></div>
+                </div>
+              </div>
+
+              <div class="progress" data-size="md" data-label data-variant="success">
+                <div class="progress__header">
+                  <span class="progress__label">Storage Used</span>
+                  <span class="progress__value">75%</span>
+                </div>
+                <div class="progress__track">
+                  <div class="progress__fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="progress" data-size="lg" data-variant="warning" data-striped data-animated>
+                <div class="progress__track">
+                  <div class="progress__fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              
+              <br>
+              <div class="demo-block__label">Tooltips (Hover below)</div>
+              <div class="demo-block__row" style="padding-top: 10px;">
+                <div class="tooltip-wrap">
+                  <button class="btn" data-variant="outline" data-size="sm">Top Tooltip</button>
+                  <div class="tooltip" data-position="top" data-variant="dark">Information here</div>
+                </div>
+
+                <div class="tooltip-wrap">
+                  <button class="btn" data-variant="secondary" data-size="sm">Light Bottom</button>
+                  <div class="tooltip" data-position="bottom" data-variant="light">More details</div>
+                </div>
+              </div>
+
+              <br>
+              <div class="demo-block__label">Skeletons</div>
+              <div style="display:flex; align-items:center; gap: 16px;">
+                <div class="skeleton" data-variant="circle" style="width: 48px; height: 48px;"></div>
+                <div style="display:flex; flex-direction:column; gap: 8px; flex:1">
+                  <div class="skeleton" data-variant="text" style="width: 80%;"></div>
+                  <div class="skeleton" data-variant="text" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Set Indeterminate state for checkbox via JS since it can't be set via HTML attr
+    document.getElementById('indet-checkbox').indeterminate = true;
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      if (currentTheme === 'light') {
+        htmlEl.setAttribute('data-theme', 'dark');
+      } else {
+        htmlEl.setAttribute('data-theme', 'light');
+      }
+    });
+
+    // Simple scrollspy for sidebar
+    const sections = document.querySelectorAll('.demo-section');
+    const navLinks = document.querySelectorAll('.demo-sidebar__link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

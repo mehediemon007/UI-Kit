@@ -1,0 +1,267 @@
+/* ============================================================
+   TABS COMPONENT
+   Variants: data-variant="underline|pills"
+   Sizes:    data-size="sm|md|lg"
+   Toggles:  data-full-width
+   ============================================================ */
+
+.tabs {
+  display: flex;
+  position: relative;
+  font-family: var(--font-general);
+  user-select: none;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.tabs::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.tabs[data-full-width] {
+  width: 100%;
+}
+.tabs[data-full-width] .tab-item {
+  flex: 1;
+}
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--color-gray-regular);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.tab-item:hover,
+.tab-item[data-active] {
+  color: var(--color-black-inverse);
+}
+
+/* —— Underline Variant —— */
+.tabs,
+.tabs[data-variant="underline"] {
+  border-bottom: var(--bw-3xs) solid var(--color-gray-medium);
+  gap: var(--sp-6xs);
+}
+
+.tabs[data-variant="underline"] .tab-item {
+  position: relative;
+  padding: var(--sp-8xs) 0;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs[data-variant="underline"] .tab-item[data-active] {
+  border-bottom-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+
+/* —— Pills Variant —— */
+.tabs[data-variant="pills"] {
+  background: var(--color-bg-ultra-thin);
+  border-radius: var(--radius-m);
+  padding: var(--sp-10xs);
+  gap: var(--sp-10xs);
+}
+
+.tabs[data-variant="pills"] .tab-item {
+  border-radius: calc(var(--radius-m) - 4px);
+  padding: var(--sp-9xs) var(--sp-7xs);
+}
+
+.tabs[data-variant="pills"] .tab-item[data-active] {
+  background: var(--color-surface-medium);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* —— Sizes —— */
+.tabs,
+.tabs[data-size="md"] .tab-item {
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body-s);
+}
+.tabs[data-size="sm"] .tab-item {
+  font-size: var(--fs-caption-m);
+  line-height: var(--lh-caption-m);
+}
+.tabs[data-size="lg"] .tab-item {
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+}
+
+
+/* ============================================================
+   BREADCRUMBS COMPONENT
+   ============================================================ */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-9xs);
+  font-family: var(--font-general);
+  font-size: var(--fs-body-s);
+}
+
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-gray-regular);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-item:hover,
+.breadcrumb-item[data-active] {
+  color: var(--color-black-inverse);
+}
+
+.breadcrumb-separator {
+  color: var(--color-gray-medium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+
+/* ============================================================
+   STEPPER COMPONENT
+   Variants: data-orientation="horizontal|vertical"
+   ============================================================ */
+
+.stepper {
+  display: flex;
+  font-family: var(--font-general);
+  width: 100%;
+}
+
+.stepper,
+.stepper[data-orientation="horizontal"] {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--sp-10xs);
+}
+
+.stepper[data-orientation="vertical"] {
+  flex-direction: column;
+  gap: var(--sp-10xs);
+}
+
+.step-item {
+  display: flex;
+  position: relative;
+  flex: 1;
+}
+
+.stepper[data-orientation="horizontal"] .step-item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stepper[data-orientation="vertical"] .step-item {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-bg-ultra-thin);
+  border: var(--bw-2xs) solid var(--color-gray-medium);
+  color: var(--color-gray-regular);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body-s);
+  z-index: 2;
+  transition: all var(--transition-fast);
+  background-clip: padding-box; /* To ensure background doesn't bleed under border */
+}
+
+.stepper[data-orientation="horizontal"] .step-indicator {
+  margin-bottom: var(--sp-8xs);
+}
+.stepper[data-orientation="vertical"] .step-indicator {
+  margin-right: var(--sp-7xs);
+  margin-bottom: var(--sp-3xs);
+}
+
+/* Connector Lines */
+.stepper[data-orientation="horizontal"] .step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: calc(50% + 24px);
+  right: calc(-50% + 24px);
+  height: var(--bw-2xs);
+  background: var(--color-gray-medium);
+  z-index: 1;
+  transition: background var(--transition-fast);
+}
+
+.stepper[data-orientation="vertical"] .step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: -4px;
+  left: 15px; /* Center of the 32px indicator */
+  width: var(--bw-2xs);
+  background: var(--color-gray-medium);
+  z-index: 1;
+  transition: background var(--transition-fast);
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stepper[data-orientation="vertical"] .step-content {
+  padding-bottom: var(--sp-4xs);
+  padding-top: 4px;
+}
+
+.step-title {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-body-m);
+  color: var(--color-gray-regular);
+  transition: color var(--transition-fast);
+}
+
+.step-description {
+  font-size: var(--fs-caption-m);
+  color: var(--color-gray-regular);
+  opacity: 0.8;
+}
+
+/* —— Active State —— */
+.step-item[data-active] .step-indicator {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+  background: var(--color-bg-base);
+}
+.step-item[data-active] .step-title {
+  color: var(--color-black-inverse);
+}
+
+/* —— Completed State —— */
+.step-item[data-completed] .step-indicator {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  color: var(--color-white-base);
+}
+.step-item[data-completed]::after {
+  background: var(--color-accent-primary);
+}
+.step-item[data-completed] .step-title {
+  color: var(--color-black-inverse);
+}
